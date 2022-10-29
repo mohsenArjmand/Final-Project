@@ -9,7 +9,6 @@ export default function Todos() {
 
 
     function handleEventAddTodo() {
-        // { id: todos.lentgh + 1, name: inputTodo, change: false }
         let newtodos = [...todos, ...todo]
         console.log(newtodos)
         setTodos(newtodos)
@@ -35,8 +34,6 @@ export default function Todos() {
         if (index !== -1) {
 
             let newtemp = filterItems(arrayTemp, todoId)
-            //arrayTemp.slice(index,1);
-            //arrayTemp.splice(index,1);
             console.log(newtemp)
             setTodos([...newtemp])
             setTodo('')
@@ -76,9 +73,7 @@ export default function Todos() {
 
     return (
         <div>
-            <p>TodoS</p>
-            <hr></hr>
-            {/* <AddTodo todoprops={todos}></AddTodo> */}
+            {/* <p>TodoS</p>
             <hr></hr>
             {todos.map(
                 (todoElement) => {
@@ -88,13 +83,13 @@ export default function Todos() {
                         propshandleEventDouble={(todoId) => { handleEventOnDoubleClick(todoElement.id) }}
                         propshandleEventInputSpan={(todoId, event) => { handleEventOnChangeInputSpan(todoElement.id) }}
                     />)
-                })}
+                })} */}
 
-            <ol>
+            {/* <ol>
                 {todos.map((todoEl) => (<li key={todoEl.id}> {todoEl.name}</li>))}
             </ol>
-            <hr></hr>
-            <h4>Without Todo Components</h4>
+            <hr></hr> */}
+            <h4>Without Redux Todo Components</h4>
             {todos.map(
                 (todoElement) => {
                     return (<div> {todoElement.change === true ?

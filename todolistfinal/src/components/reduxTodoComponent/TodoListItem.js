@@ -4,7 +4,7 @@ const TodoListItem = ({ name, complete, onClick }) => {
   return (
     <li
       onClick={onClick}
-      style={{ textDecoration: complete ? "color" : "pink" }}
+      style={{ textDecoration: complete ? "line-through" : "none" }}
     >
       {name}
     </li>
@@ -12,3 +12,15 @@ const TodoListItem = ({ name, complete, onClick }) => {
 };
 
 export default TodoListItem;
+// const TodoListItem = ({ id,name, complete, onClick }) => {
+//   return (
+//     <li key={id}
+//       onClick={onClick}
+//       style={{ textDecoration: complete ? "color" : "pink" }}
+//     >
+//       {name} 
+//     </li>
+//   );
+// };
+
+// export default TodoListItem;

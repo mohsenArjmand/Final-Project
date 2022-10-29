@@ -7,20 +7,32 @@ const AddTodoList = ({ dispatch }) => {
 
 
   let eventHandlerAdd = (e) => {
+    console.log(e)
+    console.log('dispatch',dispatch)
     if (todolistName.value.trim() !== "") {
-      dispatch(addTodo(todolistName.value.trim()));
+      dispatch(addTodo(todolistName.value.trim()),"ADD_TODO");
+      console.log('dispatch',dispatch)
+      console.log('value',todolistName.value.trim())
     }
   };
 
   return (
-    <div>
+    <React.Fragment>
       <input type="text" ref={node => (todolistName = node)} />
-      {/* <input type="text" ref={node => (todolistName = node)} /> */}
       <button type="submit" onClick={eventHandlerAdd}>
-       Click to Adding Todo
+        Add Todo
       </button>
-    </div>
+    </React.Fragment>
   );
+  // return (
+  //   <div>
+  //     <input type="text" ref={node => (todolistName = node)} />
+  //     {/* <input type="text" ref={node => (todolistName = node)} /> */}
+  //     <button type="submit" onClick={eventHandlerAdd}>
+  //      Click to Adding Todo
+  //     </button>
+  //   </div>
+  // );
 };
 
 export default connect()(AddTodoList);
