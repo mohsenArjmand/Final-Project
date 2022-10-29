@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AppTest from "./reduxNew/components/App";
+import AppReactReduxNew from "./reactReduxNew/components/App";
 import App from "./App";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import rootReducer from "./reduxNew/reducers";
+import rootReducer from "./reactReduxNew/reducers";
 
 const store = createStore(rootReducer);
 
@@ -15,7 +15,7 @@ const styles = {
 
 ReactDOM.render(
   <Provider store={store}>
-          <AppTest></AppTest>
+          <AppReactReduxNew></AppReactReduxNew>
           <App></App>
   </Provider>,
   document.getElementById("root")
